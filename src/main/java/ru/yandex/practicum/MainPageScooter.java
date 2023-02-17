@@ -2,9 +2,9 @@ package ru.yandex.practicum;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.JavascriptExecutor;
 
 public class MainPageScooter {
 
@@ -29,16 +29,6 @@ public class MainPageScooter {
     private By textDropElement6 = By.xpath("//*[@class='accordion__panel' and @id='accordion__panel-5']");
     private By textDropElement7 = By.xpath("//*[@class='accordion__panel' and @id='accordion__panel-6']");
     private By textDropElement8 = By.xpath("//*[@class='accordion__panel' and @id='accordion__panel-7']");
-
-    String ExpectedText1 = "Сутки — 400 рублей. Оплата курьеру — наличными или картой.";
-    String ExpectedText2 = "Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.";
-    String ExpectedText3 = "Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.";
-    String ExpectedText4 = "Только начиная с завтрашнего дня. Но скоро станем расторопнее.";
-    String ExpectedText5 = "Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.";
-    String ExpectedText6 = "Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.";
-    String ExpectedText7 = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.";
-
-    String ExpectedText8 = "Да, обязательно. Всем самокатов! И Москве, и Московской области.";
 
     public MainPageScooter(WebDriver driver) {
         this.driver = driver;
@@ -99,42 +89,42 @@ public class MainPageScooter {
 
     public void verifyTextDropElement1() {
         String ActualText1 = driver.findElement(textDropElement1).getText();
-        Assert.assertEquals("Текст не соответствует ожидаемому результату", ExpectedText1, ActualText1);
+        Assert.assertEquals("Текст не соответствует ожидаемому результату", TestData.EXPECTED_TEXT_1, ActualText1);
     }
 
     public void verifyTextDropElement2() {
         String ActualText2 = driver.findElement(textDropElement2).getText();
-        Assert.assertEquals("Текст не соответствует ожидаемому результату", ExpectedText2, ActualText2);
+        Assert.assertEquals("Текст не соответствует ожидаемому результату", TestData.EXPECTED_TEXT_2, ActualText2);
     }
 
     public void verifyTextDropElement3() {
         String ActualText3 = driver.findElement(textDropElement3).getText();
-        Assert.assertEquals("Текст не соответствует ожидаемому результату", ExpectedText3, ActualText3);
+        Assert.assertEquals("Текст не соответствует ожидаемому результату", TestData.EXPECTED_TEXT_3, ActualText3);
     }
 
     public void verifyTextDropElement4() {
         String ActualText4 = driver.findElement(textDropElement4).getText();
-        Assert.assertEquals("Текст не соответствует ожидаемому результату", ExpectedText4, ActualText4);
+        Assert.assertEquals("Текст не соответствует ожидаемому результату", TestData.EXPECTED_TEXT_4, ActualText4);
     }
 
     public void verifyTextDropElement5() {
         String ActualText5 = driver.findElement(textDropElement5).getText();
-        Assert.assertEquals("Текст не соответствует ожидаемому результату", ExpectedText5, ActualText5);
+        Assert.assertEquals("Текст не соответствует ожидаемому результату", TestData.EXPECTED_TEXT_5, ActualText5);
     }
 
     public void verifyTextDropElement6() {
         String ActualText6 = driver.findElement(textDropElement6).getText();
-        Assert.assertEquals("Текст не соответствует ожидаемому результату", ExpectedText6, ActualText6);
+        Assert.assertEquals("Текст не соответствует ожидаемому результату", TestData.EXPECTED_TEXT_6, ActualText6);
     }
 
     public void verifyTextDropElement7() {
         String ActualText7 = driver.findElement(textDropElement7).getText();
-        Assert.assertEquals("Текст не соответствует ожидаемому результату", ExpectedText7, ActualText7);
+        Assert.assertEquals("Текст не соответствует ожидаемому результату", TestData.EXPECTED_TEXT_7, ActualText7);
     }
 
     public void verifyTextDropElement8() {
         String ActualText8 = driver.findElement(textDropElement8).getText();
-        Assert.assertEquals("Текст не соответствует ожидаемому результату", ExpectedText8, ActualText8);
+        Assert.assertEquals("Текст не соответствует ожидаемому результату", TestData.EXPECTED_TEXT_8, ActualText8);
     }
 
 }

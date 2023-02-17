@@ -90,4 +90,20 @@ public class OrderPageScooter {
         driver.findElement(buttonYesPopupOrderModal).click();
     }
 
+    public void enterFieldPage1(String Name, String Surname, String Address, String Station, String Phone){
+        OrderPageScooter objOrderPageScooter = new OrderPageScooter(driver);
+        objOrderPageScooter.enterName(Name);
+        objOrderPageScooter.enterSurname(Surname);
+        objOrderPageScooter.enterAddress(Address);
+        objOrderPageScooter.enterStation(Station);
+        objOrderPageScooter.enterPhone(Phone);
+    }
+
+    public void enterFieldPage2(String Time, String Period, String Color){
+        OrderPageScooter objOrderPageScooter = new OrderPageScooter(driver);
+        objOrderPageScooter.enterTimeDelivery(Time);
+        objOrderPageScooter.enterRentalPeriod(Period);
+        objOrderPageScooter.clickScooterColor(Color);
+    }
+
 }

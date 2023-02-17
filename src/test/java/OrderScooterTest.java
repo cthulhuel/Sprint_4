@@ -65,15 +65,9 @@ public class OrderScooterTest {
         OrderPageScooter objOrderPageScooter = new OrderPageScooter(driver);
         objMainPageScooter.clickButtonCookie();
         objOrderPageScooter.clickButtonOrder();
-        objOrderPageScooter.enterName(Name);
-        objOrderPageScooter.enterSurname(Surname);
-        objOrderPageScooter.enterAddress(Address);
-        objOrderPageScooter.enterStation(Station);
-        objOrderPageScooter.enterPhone(Phone);
+        objOrderPageScooter.enterFieldPage1(Name, Surname, Address, Station, Phone);
         objOrderPageScooter.clickButtonOrderNext();
-        objOrderPageScooter.enterTimeDelivery(Time);
-        objOrderPageScooter.enterRentalPeriod(Period);
-        objOrderPageScooter.clickScooterColor(Color);
+        objOrderPageScooter.enterFieldPage2(Time, Period, Color);
         objOrderPageScooter.clickButtonOrderFinal();
         objOrderPageScooter.clickButtonYesOrderModal();
 
